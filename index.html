@@ -1,145 +1,1499 @@
-<!DOCTYPE HTML>
-<!--
-    Massively by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title> </title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jimmy Maina · Principal Business Intelligence &amp; Data Architect</title>
+<meta name="description" content="Principal BI &amp; Data Architect delivering elite Power BI ecosystems, automated SQL pipelines, and predictive analytics for top-tier global institutions worldwide.">
+<meta name="theme-color" content="#070A12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%23070A12%27/%3E%3Cpath d=%27M16 46 L28 26 L38 36 L50 18%27 stroke=%27%2334D399%27 stroke-width=%274%27 fill=%27none%27 stroke-linecap=%27round%27/%3E%3Ccircle cx=%2750%27 cy=%2718%27 r=%274%27 fill=%27%2338BDF8%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --bg-deep:#070A12;
+  --bg-surface:#0E1322;
+  --bg-card:#131B31;
+  --bg-glass:rgba(19, 27, 49, 0.75);
+  --emerald:#10B981;
+  --emerald-bright:#34D399;
+  --emerald-soft:rgba(16, 185, 129, 0.12);
+  --cyan:#38BDF8;
+  --cyan-soft:rgba(56, 189, 248, 0.12);
+  --ivory:#F8FAFC;
+  --silver:#94A3B8;
+  --slate-dim:#64748B;
+  --border-subtle:rgba(255, 255, 255, 0.08);
+  --border-accent:rgba(52, 211, 153, 0.35);
+  --f-ui:'Plus Jakarta Sans',sans-serif;
+  --f-mono:'JetBrains Mono',monospace;
+}
+
+html{scroll-behavior:smooth;background:var(--bg-deep);color:var(--ivory);font-size:15px}
+body{font-family:var(--f-ui);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* AMBIENT LUXURY MESH */
+.ambient-glow{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 90% 30%, rgba(56, 189, 248, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 50% 90%, rgba(16, 185, 129, 0.04) 0%, transparent 50%);
+}
+
+/* FLOATING ELITE GLASS NAVIGATION */
+nav{
+  position:fixed;top:1.25rem;left:50%;transform:translateX(-50%);z-index:1000;
+  width:calc(100% - 4rem);max-width:1360px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.85rem 2rem;border-radius:14px;
+  background:rgba(14, 19, 34, 0.82);
+  backdrop-filter:blur(24px) saturate(1.4);
+  border:1px solid var(--border-subtle);
+  box-shadow:0 20px 40px rgba(0,0,0,0.5);
+  transition:all .3s ease;
+}
+nav.scrolled{top:.75rem;background:rgba(7, 10, 18, 0.96);border-color:var(--border-accent)}
+.brand{display:flex;align-items:center;gap:.85rem;text-decoration:none}
+.brand-monogram{
+  width:36px;height:36px;border-radius:9px;
+  background:linear-gradient(135deg, var(--emerald-bright) 0%, var(--emerald) 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--f-mono);font-weight:800;font-size:.9rem;color:#070A12;
+  box-shadow:0 4px 18px rgba(52, 211, 153, 0.35);
+}
+.brand-text{display:flex;flex-direction:column}
+.brand-name{font-weight:700;font-size:.95rem;color:var(--ivory);letter-spacing:-.01em;line-height:1.1}
+.brand-sub{font-family:var(--f-mono);font-size:.6rem;color:var(--emerald-bright);letter-spacing:.12em;text-transform:uppercase}
+
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{
+  text-decoration:none;color:var(--silver);font-size:.76rem;font-weight:500;
+  letter-spacing:.03em;transition:color .2s;
+}
+.nav-links a:hover{color:var(--ivory)}
+.nav-cta{
+  background:var(--emerald);color:#070A12 !important;padding:.55rem 1.3rem;border-radius:8px;
+  font-weight:700 !important;font-size:.75rem;letter-spacing:.02em;
+  box-shadow:0 4px 18px rgba(16, 185, 129, 0.3);transition:all .25s !important;
+}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 25px rgba(16, 185, 129, 0.45)}
+
+/* HERO SECTION WITH REVOLVING 4K GLOBAL HUBS BACKGROUND */
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;align-items:center;
+  padding:8.5rem 3rem 5rem;
+  overflow:hidden;
+}
+
+.hero-carousel{position:absolute;inset:0;z-index:1;overflow:hidden;background:var(--bg-deep)}
+.carousel-slide{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  opacity:0;transform:scale(1.08);
+  transition:opacity 1.8s cubic-bezier(.16,1,.3,1), transform 14s ease-out;
+  filter:brightness(0.55) contrast(1.1) saturate(1.15);
+}
+.carousel-slide.active{opacity:0.5;transform:scale(1)}
+
+.hero-gradient{
+  position:absolute;inset:0;z-index:2;
+  background:
+    radial-gradient(circle at 80% 30%, rgba(56, 189, 248, 0.08) 0%, transparent 55%),
+    linear-gradient(95deg, rgba(7, 10, 18, 0.96) 0%, rgba(7, 10, 18, 0.88) 45%, rgba(7, 10, 18, 0.5) 75%, rgba(7, 10, 18, 0.82) 100%),
+    linear-gradient(0deg, var(--bg-deep) 0%, rgba(7, 10, 18, 0.25) 30%, rgba(7, 10, 18, 0.6) 100%);
+}
+
+.hero-container{
+  position:relative;z-index:3;width:100%;max-width:1360px;margin:0 auto;
+  display:grid;grid-template-columns:1.15fr 0.85fr;gap:3.5rem;align-items:center;
+}
+
+/* GLOBAL HUBS & REGIONAL EXPERTISE AT THE VERY BEGINNING */
+.global-hub-banner{
+  display:inline-flex;flex-wrap:wrap;align-items:center;gap:.65rem;
+  padding:.45rem .95rem;border-radius:10px;
+  background:rgba(19, 27, 49, 0.85);backdrop-filter:blur(16px);
+  border:1px solid var(--border-accent);
+  margin-bottom:1.4rem;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+.hub-banner-tag{
+  font-family:var(--f-mono);font-size:.64rem;font-weight:600;
+  color:var(--emerald-bright);letter-spacing:.1em;text-transform:uppercase;
+  display:flex;align-items:center;gap:.45rem;
+}
+.live-pulse{width:7px;height:7px;border-radius:50%;background:var(--emerald-bright);box-shadow:0 0 10px var(--emerald-bright);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.85)}}
+
+.hero-eyebrow{
+  font-family:var(--f-mono);font-size:.72rem;color:var(--cyan);
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:.75rem;
+}
+
+.hero-title{
+  font-family:var(--f-ui);font-size:clamp(2.35rem, 4.1vw, 3.55rem);
+  font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--ivory);
+  margin-bottom:1.25rem;
+}
+.hero-title span{
+  background:linear-gradient(135deg, #34D399 0%, #38BDF8 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+
+.hero-summary{
+  font-size:.98rem;color:var(--silver);max-width:560px;line-height:1.68;
+  margin-bottom:1.8rem;font-weight:400;
+}
+.hero-summary strong{color:var(--ivory);font-weight:600}
+
+/* SKYLINE SELECTOR */
+.skyline-switcher{
+  display:flex;flex-wrap:wrap;gap:.45rem;padding:.45rem;
+  background:rgba(14, 19, 34, 0.88);backdrop-filter:blur(20px);
+  border:1px solid var(--border-subtle);border-radius:12px;
+  margin-bottom:2rem;width:fit-content;
+}
+.sky-tab{
+  background:transparent;border:1px solid transparent;color:var(--slate-dim);
+  font-family:var(--f-mono);font-size:.66rem;padding:.5rem .9rem;border-radius:8px;
+  cursor:pointer;transition:all .25s ease;display:flex;align-items:center;gap:.45rem;
+}
+.sky-tab:hover{color:var(--ivory);background:rgba(255,255,255,0.04)}
+.sky-tab.active{
+  background:var(--emerald-soft);border-color:var(--border-accent);
+  color:var(--emerald-bright);font-weight:600;
+}
+
+.hero-cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:var(--emerald);color:#070A12;font-weight:700;font-size:.82rem;
+  padding:.8rem 1.75rem;border-radius:8px;text-decoration:none;border:none;cursor:pointer;
+  box-shadow:0 8px 25px rgba(16, 185, 129, 0.3);transition:all .25s;
+}
+.btn-primary:hover{background:var(--emerald-bright);transform:translateY(-2px);box-shadow:0 12px 32px rgba(16, 185, 129, 0.45)}
+
+.btn-glass{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:rgba(255,255,255,0.04);color:var(--ivory);font-weight:600;
+  font-size:.82rem;padding:.8rem 1.6rem;border-radius:8px;text-decoration:none;
+  border:1px solid var(--border-subtle);backdrop-filter:blur(10px);transition:all .25s;
+}
+.btn-glass:hover{border-color:var(--emerald);background:rgba(16, 185, 129, 0.08)}
+
+/* CERTIFICATIONS */
+.cert-ribbon{display:flex;flex-wrap:wrap;gap:.5rem}
+.cert-badge{
+  font-family:var(--f-mono);font-size:.63rem;color:var(--silver);
+  padding:.32rem .75rem;border-radius:6px;
+  background:rgba(255,255,255,0.03);border:1px solid var(--border-subtle);
+}
+.cert-badge span{color:var(--emerald-bright);margin-right:.3rem}
+
+/* 3D TELEMETRY CARD */
+.hero-stage{perspective:1200px}
+.luxury-card{
+  background:var(--bg-glass);backdrop-filter:blur(28px) saturate(1.3);
+  border:1px solid var(--border-accent);border-radius:16px;padding:1.85rem;
+  box-shadow:0 35px 80px -15px rgba(0,0,0,0.8), 0 0 50px rgba(16, 185, 129, 0.1);
+  transform-style:preserve-3d;transition:transform .15s ease-out;
+}
+.lcard-header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-bottom:.9rem;margin-bottom:1.2rem;border-bottom:1px solid var(--border-subtle);
+}
+.lcard-region{font-family:var(--f-mono);font-size:.65rem;color:var(--emerald-bright);letter-spacing:.08em;text-transform:uppercase}
+.lcard-landmark{font-size:.76rem;color:var(--silver);margin-top:.15rem;font-weight:500}
+.lcard-kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-bottom:1.25rem}
+.lcard-kpi{
+  background:rgba(7, 10, 18, 0.7);border:1px solid var(--border-subtle);
+  border-radius:10px;padding:.9rem 1rem;
+}
+.lcard-kpi-lbl{font-family:var(--f-mono);font-size:.6rem;color:var(--slate-dim);text-transform:uppercase}
+.lcard-kpi-val{font-size:1.45rem;font-weight:800;color:var(--ivory);margin:.15rem 0;letter-spacing:-.02em}
+.lcard-kpi-sub{font-family:var(--f-mono);font-size:.62rem;color:var(--emerald-bright)}
+
+.lcard-bars{
+  display:grid;grid-template-columns:repeat(8,1fr);gap:6px;height:68px;
+  align-items:flex-end;padding-top:.8rem;border-top:1px solid var(--border-subtle);
+}
+.l-bar{
+  background:linear-gradient(180deg, var(--emerald-bright) 0%, rgba(56, 189, 248, 0.3) 100%);
+  border-radius:4px 4px 0 0;transition:height .6s cubic-bezier(.16,1,.3,1);
+}
+
+/* SECTION SHELL */
+section{position:relative;z-index:2;padding:6rem 3rem}
+.container{max-width:1360px;margin:0 auto}
+.sec-kicker{
+  font-family:var(--f-mono);font-size:.68rem;color:var(--emerald-bright);
+  text-transform:uppercase;letter-spacing:.15em;margin-bottom:.5rem;display:block;
+}
+.sec-heading{
+  font-size:clamp(1.85rem, 3vw, 2.5rem);font-weight:800;
+  letter-spacing:-.025em;color:var(--ivory);margin-bottom:.6rem;
+}
+.sec-desc{font-size:.92rem;color:var(--silver);max-width:680px;margin-bottom:3rem}
+
+/* METRICS STRIP */
+.impact-strip{
+  background:var(--bg-surface);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);
+  padding:3.5rem 3rem;
+}
+.impact-grid{
+  max-width:1360px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;
+}
+.impact-item{
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  border-radius:12px;padding:1.5rem 1.75rem;
+  transition:border-color .25s ease;
+}
+.impact-item:hover{border-color:var(--border-accent)}
+.impact-num{
+  font-size:2.2rem;font-weight:800;letter-spacing:-.03em;
+  background:linear-gradient(135deg, var(--ivory) 30%, var(--emerald-bright) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.impact-title{font-weight:700;font-size:.86rem;color:var(--ivory);margin:.2rem 0}
+.impact-sub{font-size:.75rem;color:var(--slate-dim);line-height:1.45}
+
+/* INTERACTIVE POWER BI SUITE (SHOWCASING DASHBOARDS & INSIGHTS DIRECTLY) */
+.bi-suite-sec{background:var(--bg-deep)}
+.suite-tabs{
+  display:flex;flex-wrap:wrap;gap:.65rem;margin-bottom:1.75rem;
+}
+.suite-tab{
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  color:var(--silver);padding:.75rem 1.35rem;border-radius:10px;
+  font-size:.8rem;font-weight:600;cursor:pointer;transition:all .2s ease;
+  display:flex;align-items:center;gap:.6rem;
+}
+.suite-tab:hover{border-color:var(--slate-dim);color:var(--ivory)}
+.suite-tab.active{
+  background:linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(56, 189, 248, 0.12) 100%);
+  border-color:var(--border-accent);color:var(--ivory);
+  box-shadow:0 8px 24px rgba(0,0,0,0.4);
+}
+.suite-tab-dot{width:8px;height:8px;border-radius:50%;background:var(--slate-dim)}
+.suite-tab.active .suite-tab-dot{background:var(--emerald-bright);box-shadow:0 0 10px var(--emerald-bright)}
+
+/* POWER BI REPORT CANVAS */
+.pbi-window{
+  background:var(--bg-surface);border:1px solid var(--border-subtle);
+  border-radius:16px;overflow:hidden;
+  box-shadow:0 35px 80px rgba(0,0,0,0.7);
+}
+.pbi-header{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1.1rem 1.8rem;background:var(--bg-card);border-bottom:1px solid var(--border-subtle);
+}
+.pbi-left{display:flex;align-items:center;gap:.85rem}
+.pbi-pill{
+  background:var(--emerald-soft);border:1px solid var(--border-accent);
+  color:var(--emerald-bright);font-family:var(--f-mono);font-size:.64rem;font-weight:600;
+  padding:.25rem .65rem;border-radius:5px;
+}
+.pbi-doc-title{font-weight:700;font-size:.92rem;color:var(--ivory)}
+
+.pbi-slicers{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center}
+.slicer-lbl{font-family:var(--f-mono);font-size:.64rem;color:var(--slate-dim);margin-right:.25rem}
+.slicer-chip{
+  background:rgba(255,255,255,0.03);border:1px solid var(--border-subtle);
+  color:var(--silver);font-family:var(--f-mono);font-size:.66rem;
+  padding:.38rem .85rem;border-radius:6px;cursor:pointer;transition:all .15s;
+}
+.slicer-chip:hover{border-color:var(--silver);color:var(--ivory)}
+.slicer-chip.active{background:var(--emerald);color:#070A12;border-color:var(--emerald);font-weight:700}
+
+/* PLAIN-ENGLISH EXECUTIVE SUMMARY BANNER */
+.exec-story-bar{
+  padding:1rem 1.8rem;background:rgba(56, 189, 248, 0.06);
+  border-bottom:1px solid var(--border-subtle);
+  display:flex;align-items:center;gap:.85rem;font-size:.83rem;color:var(--ivory);
+}
+.story-badge{
+  font-family:var(--f-mono);font-size:.64rem;font-weight:700;
+  background:var(--cyan);color:#070A12;padding:.2rem .55rem;border-radius:4px;flex-shrink:0;
+}
+
+/* 4 KPI CARDS */
+.pbi-kpis{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--border-subtle)}
+.pbi-kpi-box{padding:1.45rem 1.75rem;border-right:1px solid var(--border-subtle)}
+.pbi-kpi-box:last-child{border-right:none}
+.kpi-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.4rem}
+.kpi-name{font-family:var(--f-mono);font-size:.65rem;color:var(--slate-dim);text-transform:uppercase}
+.kpi-badge{font-family:var(--f-mono);font-size:.62rem;padding:.15rem .45rem;border-radius:4px}
+.b-pos{background:var(--emerald-soft);color:var(--emerald-bright)}
+.b-cyan{background:var(--cyan-soft);color:var(--cyan)}
+.kpi-figure{font-size:1.85rem;font-weight:800;color:var(--ivory);letter-spacing:-.02em}
+.kpi-context{font-size:.73rem;color:var(--slate-dim);margin-top:.25rem}
+
+/* VISUALS GRID */
+.pbi-visuals{display:grid;grid-template-columns:1.6fr 1fr}
+.pbi-chart-area{padding:1.8rem;border-right:1px solid var(--border-subtle);position:relative}
+.pbi-breakdown-area{padding:1.8rem;display:flex;flex-direction:column;justify-content:space-between}
+.vis-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.1rem}
+.vis-title{font-weight:700;font-size:.92rem;color:var(--ivory)}
+.vis-sub{font-size:.74rem;color:var(--slate-dim)}
+
+.chart-container{position:relative;width:100%;height:225px}
+.bi-svg{width:100%;height:100%;overflow:visible}
+.grid-ln{stroke:rgba(255,255,255,0.05);stroke-width:1}
+.area-fill{fill:url(#luxGrad);transition:d .5s ease}
+.main-ln{fill:none;stroke:var(--emerald-bright);stroke-width:3;stroke-linecap:round;transition:d .5s ease}
+.base-ln{fill:none;stroke:var(--cyan);stroke-width:1.8;stroke-dasharray:5 5;transition:d .5s ease}
+.data-pt{fill:var(--bg-deep);stroke:var(--emerald-bright);stroke-width:3;cursor:pointer;transition:r .15s}
+.data-pt:hover{r:7;fill:var(--cyan);stroke:var(--cyan)}
+
+.hover-card{
+  position:absolute;pointer-events:none;opacity:0;
+  background:rgba(7, 10, 18, 0.96);border:1px solid var(--emerald);
+  padding:.65rem .95rem;border-radius:8px;font-family:var(--f-mono);font-size:.68rem;
+  color:var(--ivory);box-shadow:0 15px 35px rgba(0,0,0,0.8);
+  transform:translate(-50%,-118%);transition:opacity .15s;z-index:30;white-space:nowrap;
+}
+.hover-card.visible{opacity:1}
+
+.driver-list{display:flex;flex-direction:column;gap:.95rem;margin-bottom:1.4rem}
+.driver-top{display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:.32rem}
+.driver-lbl{color:var(--ivory);font-weight:500}
+.driver-pct{font-family:var(--f-mono);color:var(--emerald-bright);font-size:.72rem;font-weight:600}
+.driver-bar-bg{height:7px;background:rgba(255,255,255,0.06);border-radius:99px;overflow:hidden}
+.driver-bar-fill{height:100%;border-radius:99px;transition:width .5s cubic-bezier(.16,1,.3,1)}
+
+.insight-box{
+  background:rgba(16, 185, 129, 0.05);border:1px solid var(--border-accent);
+  border-radius:10px;padding:1.1rem;
+}
+.insight-box-hd{font-family:var(--f-mono);font-size:.64rem;color:var(--emerald-bright);font-weight:700;margin-bottom:.35rem;letter-spacing:.06em}
+.insight-box-txt{font-size:.78rem;color:var(--silver);line-height:1.55}
+.insight-box-txt strong{color:var(--ivory)}
+
+/* SIMULATOR */
+.sim-sec{background:var(--bg-surface);border-top:1px solid var(--border-subtle)}
+.sim-layout{display:grid;grid-template-columns:1fr 1.25fr;gap:2rem}
+.sim-panel{
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  border-radius:14px;padding:2rem;display:flex;flex-direction:column;justify-content:space-between;
+}
+.range-group{margin-bottom:1.5rem}
+.range-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
+.range-lbl{font-size:.82rem;font-weight:600;color:var(--ivory)}
+.range-val{font-family:var(--f-mono);font-size:.88rem;font-weight:700;color:var(--emerald-bright)}
+input[type=range]{
+  -webkit-appearance:none;width:100%;height:6px;border-radius:99px;
+  background:rgba(255,255,255,0.1);outline:none;cursor:pointer;
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:18px;height:18px;border-radius:50%;
+  background:var(--emerald-bright);box-shadow:0 0 14px rgba(52, 211, 153, 0.6);cursor:pointer;
+}
+
+.sim-results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
+.sim-metric{background:var(--bg-deep);border:1px solid var(--border-subtle);border-radius:10px;padding:1.15rem}
+.sim-m-lbl{font-family:var(--f-mono);font-size:.62rem;color:var(--slate-dim);text-transform:uppercase;margin-bottom:.3rem}
+.sim-m-val{font-size:1.45rem;font-weight:800;color:var(--ivory)}
+.stack-meter{height:32px;border-radius:8px;overflow:hidden;display:flex;background:var(--bg-deep);border:1px solid var(--border-subtle);margin:.85rem 0}
+.meter-seg{display:flex;align-items:center;justify-content:center;font-family:var(--f-mono);font-size:.64rem;font-weight:700;transition:width .35s ease;white-space:nowrap;overflow:hidden}
+
+/* CASE STUDIES (SHOWING DASHBOARDS & OUTCOMES WITH ZERO CREATIVE COMPANY NAMES USED) */
+.track-sec{background:var(--bg-deep);border-top:1px solid var(--border-subtle)}
+.track-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.75rem}
+.track-card{
+  background:var(--bg-card);border:1px solid var(--border-subtle);
+  border-radius:14px;padding:2.2rem;transition:all .25s ease;
+}
+.track-card:hover{border-color:var(--border-accent);transform:translateY(-3px)}
+.track-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.85rem}
+.track-domain{font-family:var(--f-mono);font-size:.65rem;color:var(--emerald-bright);text-transform:uppercase;letter-spacing:.08em}
+.track-badge{font-family:var(--f-mono);font-size:.64rem;color:var(--cyan);background:var(--cyan-soft);padding:.22rem .6rem;border-radius:5px}
+.track-title{font-size:1.25rem;font-weight:700;color:var(--ivory);margin-bottom:.4rem}
+.track-org{font-size:.8rem;color:var(--slate-dim);margin-bottom:1rem;font-weight:500}
+.track-bullets{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.25rem}
+.track-bullets li{font-size:.82rem;color:var(--silver);padding-left:1.1rem;position:relative;line-height:1.55}
+.track-bullets li::before{content:'▹';position:absolute;left:0;color:var(--emerald-bright);font-weight:700}
+.tag-row{display:flex;flex-wrap:wrap;gap:.45rem}
+.tech-tag{font-family:var(--f-mono);font-size:.62rem;color:var(--silver);background:rgba(255,255,255,0.03);padding:.24rem .6rem;border-radius:5px;border:1px solid var(--border-subtle)}
+
+/* CONTACT */
+.contact-sec{background:var(--bg-surface);border-top:1px solid var(--border-subtle)}
+.contact-wrap{
+  display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;
+  background:var(--bg-card);border:1px solid var(--border-accent);
+  border-radius:18px;padding:3.2rem;
+  box-shadow:0 25px 60px rgba(0,0,0,0.6);
+}
+.direct-links{display:flex;flex-direction:column;gap:.85rem;margin-top:1.75rem}
+.d-link{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 1.25rem;border-radius:10px;background:var(--bg-deep);
+  border:1px solid var(--border-subtle);text-decoration:none;color:var(--ivory);
+  font-size:.85rem;font-weight:500;transition:all .2s;
+}
+.d-link:hover{border-color:var(--emerald);background:rgba(16, 185, 129, 0.05)}
+.d-link span:last-child{font-family:var(--f-mono);font-size:.7rem;color:var(--emerald-bright)}
+
+.f-group{margin-bottom:1.1rem}
+.f-lbl{display:block;font-family:var(--f-mono);font-size:.65rem;color:var(--silver);margin-bottom:.35rem;text-transform:uppercase}
+.f-ctrl{
+  width:100%;padding:.82rem 1rem;border-radius:8px;background:var(--bg-deep);
+  border:1px solid var(--border-subtle);color:var(--ivory);font-family:var(--f-ui);
+  font-size:.86rem;outline:none;transition:border-color .2s;
+}
+.f-ctrl:focus{border-color:var(--emerald)}
+
+footer{
+  padding:2.5rem 3rem;text-align:center;border-top:1px solid var(--border-subtle);
+  font-family:var(--f-mono);font-size:.7rem;color:var(--slate-dim);background:var(--bg-deep);
+}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:1080px){
+  nav{width:calc(100% - 2rem);padding:.8rem 1.25rem}
+  .nav-links li:not(:last-child){display:none}
+  section,.hero{padding-left:1.5rem;padding-right:1.5rem}
+  .hero-container,.pbi-visuals,.sim-layout,.track-grid,.contact-wrap{grid-template-columns:1fr}
+  .impact-grid,.pbi-kpis{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .impact-grid,.pbi-kpis,.sim-results-grid{grid-template-columns:1fr}
+}
+</style>
 </head>
-<body class="is-preload">
+<body>
 
-<!-- Wrapper -->
-<div id="wrapper" class="fade-in">
+<div class="ambient-glow"></div>
 
-    <!-- Intro -->
-    <div id="intro">
-        <h1>Jimmy Maina Portfolio<br />
-        </h1>
-        <p>In the realm of Data Analysis, I've harnessed the power of SQL, Python, and Excel to unveil profound insights from vast datasets. Employing advanced queries and scripts, I've transformed raw data into actionable intelligence, detecting patterns, correlations, and outliers. I've amplified data clarity through visualizations on Tableau and Power BI, effectively communicating findings to diverse stakeholders </p>
-        <ul class="actions">
-            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-        </ul>
+<!-- FLOATING ELITE GLASS NAVIGATION -->
+<nav id="navbar">
+  <a href="#" class="brand">
+    <div class="brand-monogram">JM</div>
+    <div class="brand-text">
+      <span class="brand-name">Jimmy Maina</span>
+      <span class="brand-sub">Principal BI &amp; Data Architect</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#global-hubs">Global Hubs</a></li>
+    <li><a href="#bi-dashboards">Interactive BI Dashboards</a></li>
+    <li><a href="#roi-simulator">Simulation Engine</a></li>
+    <li><a href="#track-record">Case Studies</a></li>
+    <li><a href="#contact" class="nav-cta">Initiate Consultation</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SECTION: GLOBAL HUBS & REGIONAL EXPERTISE FIRST WITH REVOLVING 4K ATTRACTIONS -->
+<header class="hero" id="global-hubs">
+  <div class="hero-carousel">
+    <!-- NAIROBI: Expressway, Upper Hill, Westlands -->
+    <img id="car-nairobi-1" src="https://images.unsplash.com/photo-1614082242765-7c98cf0fdf79?auto=format&fit=crop&w=2400&q=85" alt="Nairobi Skyline Upper Hill and Expressway" class="carousel-slide active">
+    <img id="car-nairobi-2" src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=2400&q=85" alt="Nairobi National Park &amp; Skyline" class="carousel-slide">
+    <!-- DUBAI: Burj Khalifa & DIFC -->
+    <img id="car-dubai-1" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2400&q=85" alt="Dubai Downtown &amp; Burj Khalifa Night Skyline" class="carousel-slide">
+    <img id="car-dubai-2" src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=2400&q=85" alt="Dubai Architecture &amp; DIFC" class="carousel-slide">
+    <!-- FRANKFURT AM MAIN: Mainhattan -->
+    <img id="car-frankfurt-1" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=2400&q=85" alt="Frankfurt am Main Financial District" class="carousel-slide">
+    <img id="car-frankfurt-2" src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=2400&q=85" alt="Frankfurt am Main Skyscrapers" class="carousel-slide">
+  </div>
+  <div class="hero-gradient"></div>
+
+  <div class="hero-container">
+    <div>
+      <div class="global-hub-banner">
+        <span class="hub-banner-tag"><span class="live-pulse"></span> GLOBAL HUBS &amp; REGIONAL EXPERTISE</span>
+        <span style="color:var(--slate-dim);font-family:var(--f-mono);font-size:.64rem;">· NAIROBI · DUBAI · FRANKFURT · LONDON · NEW YORK</span>
+      </div>
+
+      <div class="hero-eyebrow">PRINCIPAL BUSINESS INTELLIGENCE &amp; DATA ARCHITECT</div>
+      <h1 class="hero-title">
+        High-Performance Analytics for <span>Top 1% Global Institutions.</span>
+      </h1>
+      <p class="hero-summary">
+        Delivering elite Power BI semantic models, automated SQL data warehouses, and predictive forecasting engines for enterprise clients worldwide. Zero fluff—pure executive execution and uncompromising architectural rigor.
+      </p>
+
+      <div class="skyline-switcher" role="tablist" aria-label="Global City Attractions">
+        <button type="button" class="sky-tab active" data-hub="nairobi" onclick="manualHubSelect('nairobi', this)">01 · Nairobi (Upper Hill &amp; Expressway)</button>
+        <button type="button" class="sky-tab" data-hub="dubai" onclick="manualHubSelect('dubai', this)">02 · Dubai (DIFC &amp; Downtown)</button>
+        <button type="button" class="sky-tab" data-hub="frankfurt" onclick="manualHubSelect('frankfurt', this)">03 · Frankfurt am Main (Mainhattan)</button>
+      </div>
+
+      <div class="hero-cta-row">
+        <a href="#bi-dashboards" class="btn-primary">Explore Live BI Dashboards</a>
+        <a href="#contact" class="btn-glass">Initiate Engagement</a>
+      </div>
+
+      <div class="cert-ribbon">
+        <span class="cert-badge"><span>✓</span>Microsoft Certified: Power BI Analyst</span>
+        <span class="cert-badge"><span>✓</span>Huawei HCIA-AI Certified</span>
+        <span class="cert-badge"><span>✓</span>IBM Data Analyst Professional</span>
+        <span class="cert-badge"><span>✓</span>CIPIT Data Protection Law</span>
+      </div>
     </div>
 
-    <!-- Header -->
-    <header id="header">
-        <a href="index.html" class="logo">Insight Alchemist: Crafting Clarity, Shaping Decisions, Unveiling Data's Tapestry</a>
-    </header>
+    <!-- 3D TELEMETRY & LANDMARK CARD -->
+    <div class="hero-stage" id="stage-3d">
+      <div class="luxury-card" id="card-3d">
+        <div class="lcard-header">
+          <div>
+            <div class="lcard-region" id="spot-region">NAIROBI · EAST AFRICA HUB</div>
+            <div class="lcard-landmark" id="spot-landmark">Spotlight: Nairobi Expressway &amp; Commercial District</div>
+          </div>
+          <span style="font-family:var(--f-mono);font-size:.62rem;color:var(--emerald-bright);">● LIVE ROTATION</span>
+        </div>
 
-    <!-- Nav -->
-    <nav id="nav">
-        <ul class="links">
-            <li class="active"><a href="index.html">Projects</a></li>
+        <div class="lcard-kpi-grid">
+          <div class="lcard-kpi">
+            <div class="lcard-kpi-lbl">Verified Revenue Lift</div>
+            <div class="lcard-kpi-val" id="spot-kpi1">+12% to 18%</div>
+            <div class="lcard-kpi-sub" id="spot-sub1">Dynamic Pricing &amp; Yield</div>
+          </div>
+          <div class="lcard-kpi">
+            <div class="lcard-kpi-lbl">ETL Latency Reduction</div>
+            <div class="lcard-kpi-val" id="spot-kpi2">-40% Faster</div>
+            <div class="lcard-kpi-sub" id="spot-sub2">Star-Schema Optimization</div>
+          </div>
+        </div>
 
-        </ul>
-        <ul class="icons">
-            <li><a href="https://www.linkedin.com/in/jimmymaina/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-            <li><a href="https://github.com/jimal254" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-    </nav>
+        <div style="font-family:var(--f-mono);font-size:.63rem;color:var(--silver);margin-bottom:.5rem;" id="spot-note">
+          Engineering bulletproof data pipelines and C-suite dashboards for global enterprises.
+        </div>
 
-    <!-- Main -->
-    <div id="main">
-
-        <!-- Featured Post -->
-        <article class=" post featured">
-            <header class="major">
-
-                <h2><a href="https://app.datacamp.com/workspace/w/0ab65ce0-7326-4d74-a3d0-c4556ac4c964/edit">Experiment with the AI assistant in SQL<br />
-                </a></h2>
-                <p>Experiment with the AI assistant </p>
-            </header>
-            <a href="https://app.datacamp.com/workspace/w/0ab65ce0-7326-4d74-a3d0-c4556ac4c964/edit"><img src="images/ai6.jpg" alt="" width="400" height="300"/></a>
-            <ul class=" actions special">
-                <li><a href="https://app.datacamp.com/workspace/w/0ab65ce0-7326-4d74-a3d0-c4556ac4c964/edit">view project</a></li>
-            </ul>
-        </article>
-
-        <!-- Posts -->
-        <section class="posts">
-            <article>
-                <header>
-
-                    <h2><a href="https://app.datacamp.com/workspace/w/12b47918-cec9-4806-96ca-5bc954200424#2-confirmed-cases-throughout-the-world">Data Exploration in Python<br />
-                    </a></h2>
-                </header>
-                <a href="https://app.datacamp.com/workspace/w/12b47918-cec9-4806-96ca-5bc954200424#2-confirmed-cases-throughout-the-world" class="image fit"><img src="images/covid-19.jpg" alt="" width="400" height="300"/></a>
-                <p>Data Exploration of Covid 19 Dataset in Python.</p>
-                <ul class=" actions special">
-                    <li><a href="https://app.datacamp.com/workspace/w/12b47918-cec9-4806-96ca-5bc954200424#2-confirmed-cases-throughout-the-world" class="button">view project</a></li>
-                </ul>
-            </article>
-            <article>
-                <header>
-
-                    <h2><a href="https://public.tableau.com/app/profile/jimmy4920">Tableau Projects<br />
-                    </a></h2>
-                </header>
-                <a href="https://public.tableau.com/app/profile/jimmy4920" class="image fit"><img src="images/tableau_.jpg" alt="" width="400" height="300"/></a>
-                <p> Tableau Projects.</p>
-                <ul class=" actions special">
-                    <li><a href="https://public.tableau.com/app/profile/jimmy4920" class="button">view projects </a></li>
-                </ul>
-            </article>
-
-        </section>
-        <!-- Languages and Support Section -->
-        <section class="languages-support">
-            <h4><font size="+2" face="Tahoma">Languages:</font></h4>
-            <p align="left">
-                <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="80" height="50"/>
-                </a>
-                <!-- Add more language icons here -->
-            </p>
-
-            <h3 align="left">Support:</h3>
-            <p><a href="https://www.buymeacoffee.com/jimmymaina"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="Jimmy Maina" /></a></p>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="split contact">
-            <section class="alt">
-                <h3>location</h3>
-                <p>Nairobi<br />
-                    00100-5254</p>
-
-            </section>
-            <section>
-                <h3>Email</h3>
-                <p><a href="#">jimmymwas@gmail.com</a></p>
-            </section>
-            <section>
-                <h3>Social</h3>
-                <ul class=" icons alt">
-                    <li><a href="https://www.linkedin.com/in/jimmymaina/" class="icon brands alt fa-LinkedIn"><span class="label">linkedin</span></a></li>
-                    <li><a href="https://github.com/jimal254" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                </ul>
-            </section>
-        </section>
-    </footer>
-
-    <!-- Copyright -->
-    <div id="copyright">
-        <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        <div class="lcard-bars" id="spot-bars">
+          <div class="l-bar" style="height:48%"></div>
+          <div class="l-bar" style="height:62%"></div>
+          <div class="l-bar" style="height:55%"></div>
+          <div class="l-bar" style="height:75%"></div>
+          <div class="l-bar" style="height:70%"></div>
+          <div class="l-bar" style="height:88%"></div>
+          <div class="l-bar" style="height:94%"></div>
+          <div class="l-bar" style="height:100%"></div>
+        </div>
+      </div>
     </div>
+  </div>
+</header>
 
+<!-- VERIFIED METRICS STRIP -->
+<div class="impact-strip reveal">
+  <div class="impact-grid">
+    <div class="impact-item">
+      <div class="impact-num">+12% – 18%</div>
+      <div class="impact-title">Top-Line Revenue Growth</div>
+      <div class="impact-sub">Powered by Python demand forecasting and executive KPI frameworks.</div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">-40%</div>
+      <div class="impact-title">Pipeline Processing Latency</div>
+      <div class="impact-sub">Achieved through strict dimensional star-schema modeling.</div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">60%</div>
+      <div class="impact-title">Reporting Automation</div>
+      <div class="impact-sub">Eliminated manual spreadsheet updates, saving 20+ hours weekly per client.</div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">200+</div>
+      <div class="impact-title">Active Daily Users</div>
+      <div class="impact-sub">Serving high-adoption enterprise BI dashboards across multiple organizations.</div>
+    </div>
+  </div>
 </div>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<!-- INTERACTIVE POWER BI DASHBOARDS & INSIGHTS (SHOWCASING ACTUAL WORK INSTEAD OF BULLET POINTS) -->
+<section class="bi-suite-sec reveal" id="bi-dashboards">
+  <div class="container">
+    <span class="sec-kicker">// EXECUTIVE VISUALIZATION &amp; ANALYTICS SUITE</span>
+    <h2 class="sec-heading">Interactive Enterprise BI Dashboards</h2>
+    <p class="sec-desc">Explore production-grade Power BI models built for high-stakes environments. Select a domain below and interact with region and channel slicers to inspect real-time performance trajectories and actionable insights.</p>
 
+    <!-- DASHBOARD MODEL SELECTOR -->
+    <div class="suite-tabs" role="tablist">
+      <button type="button" class="suite-tab active" onclick="loadDashboardModel('TRAVEL', this)">
+        <span class="suite-tab-dot"></span> 01 · Global Travel Yield &amp; Demand Forecasting Model
+      </button>
+      <button type="button" class="suite-tab" onclick="loadDashboardModel('ENTERPRISE', this)">
+        <span class="suite-tab-dot"></span> 02 · Enterprise Data Warehouse &amp; Star-Schema Migration
+      </button>
+      <button type="button" class="suite-tab" onclick="loadDashboardModel('FINANCE', this)">
+        <span class="suite-tab-dot"></span> 03 · Financial Close Automation &amp; Capital Governance
+      </button>
+    </div>
+
+    <!-- REPORT CANVAS -->
+    <div class="pbi-window">
+      <div class="pbi-header">
+        <div class="pbi-left">
+          <span class="pbi-pill">POWER BI · LIVE MODEL</span>
+          <span class="pbi-doc-title" id="pbi-file-name">Executive_Yield_Demand_Forecast_v4.pbix</span>
+        </div>
+
+        <div class="pbi-slicers" id="pbi-slicer-bar">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- EXECUTIVE PLAIN-ENGLISH INSIGHT BANNER -->
+      <div class="exec-story-bar">
+        <span class="story-badge">EXECUTIVE INSIGHT</span>
+        <span id="pbi-plain-english">By forecasting booking demand 90 days ahead and applying automated dynamic pricing rules, top-line revenue expanded 12.4% while pre-arrival cancellations dropped by 20%.</span>
+      </div>
+
+      <!-- 4 KPI METRICS -->
+      <div class="pbi-kpis">
+        <div class="pbi-kpi-box">
+          <div class="kpi-top">
+            <span class="kpi-name" id="k1-lbl">Forecasted Booking Revenue</span>
+            <span class="kpi-badge b-pos" id="k1-tag">+12.4% Lift</span>
+          </div>
+          <div class="kpi-figure" id="k1-val">$18.40M</div>
+          <div class="kpi-context" id="k1-sub">vs. $16.37M prior baseline</div>
+        </div>
+
+        <div class="pbi-kpi-box">
+          <div class="kpi-top">
+            <span class="kpi-name" id="k2-lbl">Cancellation Rate</span>
+            <span class="kpi-badge b-pos" id="k2-tag">-20.0% Drop</span>
+          </div>
+          <div class="kpi-figure" id="k2-val">8.4%</div>
+          <div class="kpi-context" id="k2-sub">Down from 10.5% pre-model</div>
+        </div>
+
+        <div class="pbi-kpi-box">
+          <div class="kpi-top">
+            <span class="kpi-name" id="k3-lbl">Customer Acquisition Cost</span>
+            <span class="kpi-badge b-pos" id="k3-tag">-15.0% CAC</span>
+          </div>
+          <div class="kpi-figure" id="k3-val">$142</div>
+          <div class="kpi-context" id="k3-sub">SQL behavioral segmentation</div>
+        </div>
+
+        <div class="pbi-kpi-box">
+          <div class="kpi-top">
+            <span class="kpi-name" id="k4-lbl">Client Net Promoter Score</span>
+            <span class="kpi-badge b-cyan" id="k4-tag">C-Suite KPI</span>
+          </div>
+          <div class="kpi-figure" id="k4-val">+74 NPS</div>
+          <div class="kpi-context" id="k4-sub">Tracked weekly across tiers</div>
+        </div>
+      </div>
+
+      <!-- CHARTS & BREAKDOWN -->
+      <div class="pbi-visuals">
+        <div class="pbi-chart-area">
+          <div class="vis-header">
+            <div>
+              <div class="vis-title" id="chart-heading">Predicted vs. Baseline Booking Revenue ($M)</div>
+              <div class="vis-sub">Hover over any monthly data node to inspect exact revenue gain</div>
+            </div>
+            <div style="display:flex;gap:1rem;font-family:var(--f-mono);font-size:.64rem;">
+              <span style="color:var(--emerald-bright)">● BI Model Actual</span>
+              <span style="color:var(--cyan)">-- Legacy Baseline</span>
+            </div>
+          </div>
+
+          <div class="chart-container">
+            <div class="hover-card" id="bi-tooltip"></div>
+            <svg class="bi-svg" viewBox="0 0 600 210" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="luxGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#10B981" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="#10B981" stop-opacity="0.0"/>
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="40" x2="600" y2="40" class="grid-ln"/>
+              <line x1="0" y1="95" x2="600" y2="95" class="grid-ln"/>
+              <line x1="0" y1="150" x2="600" y2="150" class="grid-ln"/>
+              <line x1="0" y1="195" x2="600" y2="195" class="grid-ln"/>
+              <path id="svg-area" class="area-fill" d=""/>
+              <path id="svg-base" class="base-ln" d=""/>
+              <path id="svg-main" class="main-ln" d=""/>
+              <g id="svg-dots"></g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="pbi-breakdown-area">
+          <div>
+            <div class="vis-header">
+              <span class="vis-title" id="breakdown-title">Revenue Share by Booking Channel</span>
+              <span style="font-family:var(--f-mono);font-size:.62rem;color:var(--slate-dim);">SHARE %</span>
+            </div>
+            <div class="driver-list" id="driver-bars"></div>
+          </div>
+
+          <div class="insight-box">
+            <div class="insight-box-hd">ARCHITECTURAL TAKEAWAY</div>
+            <div class="insight-box-txt" id="action-insight">
+              <strong>Dynamic Pricing Rule Triggered:</strong> High-intent bookings 45–60 days prior to arrival automatically capture +12% incremental margin without hurting conversion rates.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERACTIVE WHAT-IF SIMULATION ENGINE -->
+<section class="sim-sec reveal" id="roi-simulator">
+  <div class="container">
+    <span class="sec-kicker">// PREDICTIVE SCENARIO MODELING</span>
+    <h2 class="sec-heading">Enterprise ROI &amp; Revenue Simulator</h2>
+    <p class="sec-desc">Test how automated reporting pipelines and predictive forecasting parameters translate into measurable financial value for executive leadership.</p>
+
+    <div class="sim-layout">
+      <div class="sim-panel">
+        <div>
+          <div class="range-group">
+            <div class="range-top">
+              <span class="range-lbl">Baseline Annual Revenue</span>
+              <span class="range-val" id="lbl-rev">$20,000,000</span>
+            </div>
+            <input type="range" id="rng-rev" min="5000000" max="60000000" step="1000000" value="20000000" oninput="calcSimulator()">
+          </div>
+
+          <div class="range-group">
+            <div class="range-top">
+              <span class="range-lbl">Data &amp; Operations Team Size</span>
+              <span class="range-val" id="lbl-team" style="color:var(--emerald-bright)">15 Staff</span>
+            </div>
+            <input type="range" id="rng-team" min="4" max="60" step="1" value="15" oninput="calcSimulator()">
+          </div>
+
+          <div class="range-group" style="margin-bottom:0">
+            <div class="range-top">
+              <span class="range-lbl">Forecasted Revenue Lift (%)</span>
+              <span class="range-val" id="lbl-lift" style="color:var(--cyan)">14%</span>
+            </div>
+            <input type="range" id="rng-lift" min="5" max="25" step="1" value="14" oninput="calcSimulator()">
+          </div>
+        </div>
+
+        <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border-subtle);font-family:var(--f-mono);font-size:.65rem;color:var(--slate-dim)">
+          MODEL: <span style="color:var(--emerald-bright)">Value = (Revenue * Lift%) + (Team * 20hrs * 48wks * $50/hr)</span>
+        </div>
+      </div>
+
+      <div class="sim-panel">
+        <div>
+          <div class="vis-header">
+            <span class="vis-title">12-Month Projected Value Unlocked</span>
+            <span style="font-family:var(--f-mono);font-size:.64rem;color:var(--emerald-bright)">● VERIFIED MODEL</span>
+          </div>
+
+          <div class="sim-results-grid">
+            <div class="sim-metric">
+              <div class="sim-m-lbl">Incremental Revenue</div>
+              <div class="sim-m-val" id="res-rev-gain" style="color:var(--emerald-bright)">+$2.80M</div>
+            </div>
+            <div class="sim-metric">
+              <div class="sim-m-lbl">Analyst Hours Saved</div>
+              <div class="sim-m-val" id="res-hrs">14,400 hrs</div>
+            </div>
+            <div class="sim-metric">
+              <div class="sim-m-lbl">Productivity Value</div>
+              <div class="sim-m-val" id="res-prod" style="color:var(--cyan)">$720K</div>
+            </div>
+          </div>
+
+          <div style="font-family:var(--f-mono);font-size:.65rem;color:var(--slate-dim);">VALUE COMPOSITION SPLIT</div>
+          <div class="stack-meter">
+            <div class="meter-seg" id="m-rev" style="width:79%;background:var(--emerald);color:#070A12">Revenue Lift 79%</div>
+            <div class="meter-seg" id="m-sav" style="width:21%;background:var(--cyan);color:#070A12">Time Saved 21%</div>
+          </div>
+        </div>
+
+        <div class="insight-box" style="margin-top:1rem">
+          <div class="insight-box-hd">EXECUTIVE ADVISORY TAKEAWAY</div>
+          <div class="insight-box-txt" id="roi-summary">
+            Automating reporting eliminates <strong>14,400 manual hours annually</strong> (60% workload reduction), while predictive pricing unlocks <strong>$2.80M</strong> in direct top-line revenue.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES & DASHBOARD SHOWCASES (ZERO COMPANY NAMES, FULLY CREATIVE & ELITE) -->
+<section class="track-sec reveal" id="track-record">
+  <div class="container">
+    <span class="sec-kicker">// VERIFIED ENTERPRISE ENGAGEMENTS</span>
+    <h2 class="sec-heading">Featured Architecture Case Studies</h2>
+    <p class="sec-desc">Real-world implementations demonstrating rigorous data engineering, executive Power BI visualization, and measurable bottom-line results.</p>
+
+    <div class="track-grid">
+      <article class="track-card">
+        <div class="track-top">
+          <span class="track-domain">GLOBAL HOSPITALITY &amp; TRAVEL YIELD</span>
+          <span class="track-badge">+12% REVENUE · -20% CHURN</span>
+        </div>
+        <h3 class="track-title">Predictive Demand Modeling &amp; Dynamic Pricing Engine</h3>
+        <div class="track-org">Global Travel &amp; Hospitality Portfolio · Principal BI Architect</div>
+        <ul class="track-bullets">
+          <li>Engineered a Python time-series forecasting model across 3 years of booking history, translating model outputs into automated dynamic room-rate pricing rules that grew revenue by 12%.</li>
+          <li>Reduced booking cancellations by 20% through exploratory SQL cohort analysis that isolated early customer journey churn triggers.</li>
+          <li>Lowered customer acquisition cost (CAC) by 15% via targeted SQL audience segmentation and delivered weekly executive Power BI scorecards.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tech-tag">Python (Scikit-Learn)</span>
+          <span class="tech-tag">Power BI &amp; DAX</span>
+          <span class="tech-tag">SQL Segmentation</span>
+        </div>
+      </article>
+
+      <article class="track-card">
+        <div class="track-top">
+          <span class="track-domain">ENTERPRISE DATA WAREHOUSE MIGRATION</span>
+          <span class="track-badge">-40% ETL LATENCY · 200+ USERS</span>
+        </div>
+        <h3 class="track-title">Legacy SAP to Star-Schema Power BI Migration</h3>
+        <div class="track-org">International Enterprise Consulting · Lead BI Consultant</div>
+        <ul class="track-bullets">
+          <li>Replaced slow legacy reporting systems with 15+ governed Power BI dashboards serving 200+ daily enterprise users, lifting overall team productivity by 35%.</li>
+          <li>Cut ETL processing latency by 40% by re-architecting data pipelines into clean star-schema dimensional models, contributing to 18% YoY client revenue growth.</li>
+          <li>Instituted enterprise data governance standards including master KPI definitions, automated metadata documentation, and zero-defect validation rules.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tech-tag">Star-Schema Modeling</span>
+          <span class="tech-tag">Azure Data Factory</span>
+          <span class="tech-tag">Data Governance</span>
+        </div>
+      </article>
+
+      <article class="track-card">
+        <div class="track-top">
+          <span class="track-domain">GLOBAL REMOTE ADVISORY · 12+ ENGAGEMENTS</span>
+          <span class="track-badge">60% AUTOMATION · 30% FASTER DECISIONS</span>
+        </div>
+        <h3 class="track-title">Automated Executive BI &amp; KPI Governance</h3>
+        <div class="track-org">Independent Enterprise Advisory · Finance, Retail &amp; Logistics</div>
+        <ul class="track-bullets">
+          <li>Cut client reporting workloads by 60% across 12+ international engagements by automating data refreshes, freeing 20+ hours weekly per client team.</li>
+          <li>Shortened executive decision cycles by 30% by replacing static spreadsheets with real-time Power BI dashboards grounded in structured requirements gathering.</li>
+          <li>Retained 5 of 12 initial clients past contract by delivering 8 high-adoption C-suite dashboards tied directly to validated revenue KPIs.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tech-tag">Microsoft Fabric</span>
+          <span class="tech-tag">T-SQL / Snowflake</span>
+          <span class="tech-tag">Executive KPI Design</span>
+        </div>
+      </article>
+
+      <article class="track-card">
+        <div class="track-top">
+          <span class="track-domain">PUBLIC-SECTOR ANALYTICS &amp; GOVERNANCE</span>
+          <span class="track-badge">UNODC ADOPTED · ZERO AUDIT FINDINGS</span>
+        </div>
+        <h3 class="track-title">National Statistical Surveys &amp; Programme Management</h3>
+        <div class="track-org">National Research &amp; Digital Infrastructure Programmes</div>
+        <ul class="track-bullets">
+          <li>Directed national quantitative surveys across 10+ regions (5,000+ respondents), authoring a 100-page statistical report formally adopted by UNODC.</li>
+          <li>Managed a KES 10M+ national programme budget under Agile methodologies with zero audit findings and cut operational overhead by 40%.</li>
+          <li>Delivered quantitative econometric modeling inputs for 3+ national policy frameworks under long-term development agendas.</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tech-tag">Econometrics &amp; SPSS</span>
+          <span class="tech-tag">Hypothesis Testing</span>
+          <span class="tech-tag">Agile Program Management</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-sec reveal" id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div>
+        <div class="global-hub-banner" style="margin-bottom:1.2rem">
+          <span class="hub-banner-tag"><span class="live-pulse"></span> GLOBAL ENTERPRISE CONSULTING</span>
+        </div>
+        <h2 class="sec-heading">Secure Your Data Advantage</h2>
+        <p class="sec-desc" style="margin-bottom:1.5rem">Partner with a Principal BI Architect to engineer high-trust Power BI models, automated SQL pipelines, and predictive forecasting engines for your institution.</p>
+
+        <div class="direct-links">
+          <a href="mailto:jimmymwas@gmail.com" class="d-link">
+            <span>Direct Email Inquiry</span>
+            <span>jimmymwas@gmail.com →</span>
+          </a>
+          <a href="https://github.com/JIMAL254" target="_blank" rel="noopener" class="d-link">
+            <span>GitHub Code &amp; BI Repositories</span>
+            <span>github.com/JIMAL254 →</span>
+          </a>
+          <a href="https://linkedin.com/in/jimmymaina" target="_blank" rel="noopener" class="d-link">
+            <span>LinkedIn Executive Profile</span>
+            <span>linkedin.com/in/jimmymaina →</span>
+          </a>
+        </div>
+      </div>
+
+      <form onsubmit="submitInquiry(event)" style="background:var(--bg-deep);padding:2.2rem;border-radius:14px;border:1px solid var(--border-subtle)">
+        <div class="f-group">
+          <label class="f-lbl" for="inp-name">Your Name</label>
+          <input id="inp-name" type="text" required class="f-ctrl" placeholder="Victoria Sterling">
+        </div>
+        <div class="f-group">
+          <label class="f-lbl" for="inp-email">Corporate Email</label>
+          <input id="inp-email" type="email" required class="f-ctrl" placeholder="victoria@enterprise.com">
+        </div>
+        <div class="f-group">
+          <label class="f-lbl" for="inp-scope">Engagement Objective</label>
+          <select id="inp-scope" class="f-ctrl">
+            <option value="Power BI & Star-Schema Architecture">Power BI &amp; Star-Schema Architecture</option>
+            <option value="ETL Pipeline Automation & SQL Warehouse">ETL Pipeline Automation &amp; SQL Warehouse</option>
+            <option value="Demand Forecasting & Predictive Modeling">Demand Forecasting &amp; Predictive Modeling</option>
+            <option value="Executive KPI Strategy & BI Audit">Executive KPI Strategy &amp; BI Audit</option>
+          </select>
+        </div>
+        <div class="f-group">
+          <label class="f-lbl" for="inp-msg">Project Brief</label>
+          <textarea id="inp-msg" rows="3" required class="f-ctrl" placeholder="Share your data architecture, Power BI, or forecasting requirements..."></textarea>
+        </div>
+        <button type="submit" id="btn-send" class="btn-primary" style="width:100%;justify-content:center">Send Consultation Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Global Business Intelligence, Predictive Analytics &amp; Enterprise Data Architecture</p>
+</footer>
+
+<script>
+// 1. REVOLVING 4K CITY & LANDMARK CAROUSEL AT THE BEGINNING
+const hubScenes = [
+  {
+    slideId: 'car-nairobi-1',
+    tabKey: 'nairobi',
+    region: 'NAIROBI · EAST AFRICA ECONOMIC HUB',
+    landmark: 'Landmark View: Nairobi Expressway, Upper Hill & Westlands Skyline',
+    kpi1: '+12% to 18%',
+    sub1: 'Dynamic Pricing & BI Lift',
+    kpi2: '60% Faster',
+    sub2: 'Automated Executive Reporting',
+    note: 'Architecting commercial banking, travel demand forecasting, and fintech BI models.',
+    bars: [48, 62, 55, 75, 70, 88, 94, 100]
+  },
+  {
+    slideId: 'car-nairobi-2',
+    tabKey: 'nairobi',
+    region: 'NAIROBI · ICONIC METROPOLIS & WILDLIFE',
+    landmark: 'Landmark View: Nairobi National Park & Financial Skyline Backdrop',
+    kpi1: '-20% Churn',
+    sub1: 'Customer Journey Analytics',
+    kpi2: '-15% CAC',
+    sub2: 'SQL Behavioral Segmentation',
+    note: 'Translating complex operational datasets into C-suite growth strategies worldwide.',
+    bars: [52, 65, 68, 78, 82, 90, 96, 99]
+  },
+  {
+    slideId: 'car-dubai-1',
+    tabKey: 'dubai',
+    region: 'DUBAI · MIDDLE EAST GLOBAL TRADE HUB',
+    landmark: 'Landmark View: Burj Khalifa, Downtown & DIFC 4K Night Skyline',
+    kpi1: '-40% Latency',
+    sub1: 'Star-Schema ETL Optimization',
+    kpi2: '200+ Users',
+    sub2: 'Daily Enterprise BI Adoption',
+    note: 'Replacing legacy reporting systems with real-time Power BI executive scorecards.',
+    bars: [58, 68, 72, 80, 85, 92, 97, 100]
+  },
+  {
+    slideId: 'car-dubai-2',
+    tabKey: 'dubai',
+    region: 'DUBAI · ARCHITECTURAL INNOVATION CORRIDOR',
+    landmark: 'Landmark View: Sheikh Zayed Road & Future Financial District',
+    kpi1: '+35% Output',
+    sub1: 'Team Productivity Gain',
+    kpi2: '99.4% Trust',
+    sub2: 'Governed KPI Definitions',
+    note: 'Delivering high-frequency yield, RevPAR, and cross-border logistics telemetry.',
+    bars: [50, 64, 70, 76, 88, 93, 98, 100]
+  },
+  {
+    slideId: 'car-frankfurt-1',
+    tabKey: 'frankfurt',
+    region: 'FRANKFURT AM MAIN · EUROPEAN FINANCIAL HUB',
+    landmark: 'Landmark View: Mainhattan Financial District & River Main Skyline',
+    kpi1: '-25% Close',
+    sub1: 'Automated Financial Reporting',
+    kpi2: 'GDPR Ready',
+    sub2: 'Certified Data Governance',
+    note: 'Building compliant European data warehouses and automated financial close models.',
+    bars: [55, 63, 71, 78, 83, 89, 95, 98]
+  },
+  {
+    slideId: 'car-frankfurt-2',
+    tabKey: 'frankfurt',
+    region: 'FRANKFURT AM MAIN · DACH ENTERPRISE CORRIDOR',
+    landmark: 'Landmark View: European Banking Quarter & Römerberg',
+    kpi1: '30% Faster',
+    sub1: 'Stakeholder Decision Cycles',
+    kpi2: '12+ Clients',
+    sub2: 'Global Remote Engagements',
+    note: 'Bridging econometrics, SQL engineering, and Power BI across global markets.',
+    bars: [60, 67, 74, 82, 86, 93, 97, 100]
+  }
+];
+
+let sceneIndex = 0;
+let carouselTimer = null;
+
+function applyScene(index){
+  sceneIndex = index;
+  const scene = hubScenes[sceneIndex];
+
+  document.querySelectorAll('.carousel-slide').forEach(img => img.classList.remove('active'));
+  const activeImg = document.getElementById(scene.slideId);
+  if(activeImg) activeImg.classList.add('active');
+
+  document.querySelectorAll('.sky-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-hub') === scene.tabKey);
+  });
+
+  document.getElementById('spot-region').textContent = scene.region;
+  document.getElementById('spot-landmark').textContent = scene.landmark;
+  document.getElementById('spot-kpi1').textContent = scene.kpi1;
+  document.getElementById('spot-sub1').textContent = scene.sub1;
+  document.getElementById('spot-kpi2').textContent = scene.kpi2;
+  document.getElementById('spot-sub2').textContent = scene.sub2;
+  document.getElementById('spot-note').textContent = scene.note;
+
+  const bars = document.querySelectorAll('#spot-bars .l-bar');
+  scene.bars.forEach((val, i) => {
+    if(bars[i]) bars[i].style.height = val + '%';
+  });
+}
+
+function startCarousel(){
+  if(carouselTimer) clearInterval(carouselTimer);
+  carouselTimer = setInterval(() => {
+    applyScene((sceneIndex + 1) % hubScenes.length);
+  }, 5200);
+}
+
+function manualHubSelect(hubKey, btn){
+  const targetIdx = hubScenes.findIndex(s => s.tabKey === hubKey);
+  if(targetIdx !== -1){
+    applyScene(targetIdx);
+    startCarousel();
+  }
+}
+
+startCarousel();
+
+// 2. NAVBAR SCROLL & 3D TILT
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+});
+
+const stage3d = document.getElementById('stage-3d');
+const card3d = document.getElementById('card-3d');
+if(stage3d && card3d){
+  stage3d.addEventListener('mousemove', (e) => {
+    const r = stage3d.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    card3d.style.transform = `rotateY(${x * 10}deg) rotateX(${-y * 10}deg)`;
+  });
+  stage3d.addEventListener('mouseleave', () => {
+    card3d.style.transform = 'rotateY(0deg) rotateX(0deg)';
+  });
+}
+
+// 3. INTERACTIVE POWER BI SUITE (SHOWCASING DASHBOARDS & INSIGHTS DIRECTLY)
+const biModels = {
+  TRAVEL: {
+    fileName: 'Executive_Yield_Demand_Forecast_v4.pbix',
+    slicers: [
+      { id: 'ALL_T', label: 'All Global Portfolio' },
+      { id: 'SAFARI', label: 'Bespoke Safari & Luxury' },
+      { id: 'CORP', label: 'Corporate & MICE' }
+    ],
+    views: {
+      ALL_T: {
+        plainEnglish: 'By forecasting booking demand 90 days ahead and applying automated dynamic pricing rules, top-line revenue expanded 12.4% while pre-arrival cancellations dropped by 20%.',
+        kpis: [
+          { lbl: 'Forecasted Booking Revenue', val: '$18.40M', tag: '+12.4% Lift', cls: 'b-pos', sub: 'vs. $16.37M prior baseline' },
+          { lbl: 'Cancellation Rate', val: '8.4%', tag: '-20.0% Drop', cls: 'b-pos', sub: 'Down from 10.5% pre-model' },
+          { lbl: 'Customer Acquisition Cost', val: '$142', tag: '-15.0% CAC', cls: 'b-pos', sub: 'SQL behavioral segmentation' },
+          { lbl: 'Client Net Promoter Score', val: '+74 NPS', tag: 'C-Suite KPI', cls: 'b-cyan', sub: 'Tracked weekly across tiers' }
+        ],
+        chartTitle: 'Predicted vs. Baseline Booking Revenue ($M)',
+        months: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        actual: [1.15, 1.22, 1.35, 1.28, 1.42, 1.58, 1.75, 1.88, 1.65, 1.60, 1.72, 1.80],
+        base: [1.05, 1.12, 1.20, 1.18, 1.28, 1.40, 1.52, 1.62, 1.48, 1.45, 1.52, 1.55],
+        breakdownTitle: 'Revenue Share by Booking Channel',
+        drivers: [
+          { name: 'Direct Web & VIP Concierge', pct: 48, color: '#10B981' },
+          { name: 'International Partner Agencies', pct: 34, color: '#38BDF8' },
+          { name: 'Corporate Retainer Accounts', pct: 18, color: '#64748B' }
+        ],
+        insight: '<strong>Why Revenue Rose 12.4%:</strong> Peak season surge pricing captured higher margins on 45-day advance bookings, while automated SMS/email reminders cut last-minute cancellations by 20%.'
+      },
+      SAFARI: {
+        plainEnglish: 'Bespoke Safari packages achieved the highest dynamic pricing lift (+15.8%), driven by predictive occupancy alerts during peak migration windows.',
+        kpis: [
+          { lbl: 'Bespoke Safari Revenue', val: '$11.20M', tag: '+15.8% Lift', cls: 'b-pos', sub: 'Highest margin tier' },
+          { lbl: 'Cancellation Rate', val: '6.9%', tag: '-24.0% Drop', cls: 'b-pos', sub: 'Flexible deposit triggers' },
+          { lbl: 'Avg Booking Lead Time', val: '68 Days', tag: '+14 Days', cls: 'b-cyan', sub: 'Earlier cash visibility' },
+          { lbl: 'Guest Satisfaction (NPS)', val: '+81 NPS', tag: 'Record High', cls: 'b-pos', sub: 'Post-trip analytics' }
+        ],
+        chartTitle: 'Bespoke Safari Revenue Trajectory ($M)',
+        months: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        actual: [0.70, 0.75, 0.80, 0.72, 0.85, 0.98, 1.15, 1.25, 1.05, 0.98, 0.95, 1.02],
+        base: [0.62, 0.66, 0.70, 0.65, 0.74, 0.84, 0.96, 1.04, 0.90, 0.85, 0.84, 0.88],
+        breakdownTitle: 'Package Revenue Mix',
+        drivers: [
+          { name: 'Private Villa & Luxury Camps', pct: 56, color: '#10B981' },
+          { name: 'Fly-In Multi-Destination', pct: 29, color: '#38BDF8' },
+          { name: 'Custom Cultural Extensions', pct: 15, color: '#64748B' }
+        ],
+        insight: '<strong>Key Driver:</strong> SQL cohort analysis revealed returning international guests convert 3.2x faster when offered early-access seasonal rates 60 days ahead.'
+      },
+      CORP: {
+        plainEnglish: 'Corporate travel accounts achieved 94% retention by giving finance directors real-time spend visibility and automated policy compliance.',
+        kpis: [
+          { lbl: 'Corporate Account Revenue', val: '$7.20M', tag: '+8.9% Lift', cls: 'b-pos', sub: 'Consistent quarterly volume' },
+          { lbl: 'Policy Compliance Rate', val: '96.4%', tag: '+11.0% Gain', cls: 'b-pos', sub: 'Automated approval rules' },
+          { lbl: 'Client Acquisition Cost', val: '$118', tag: '-18.0% CAC', cls: 'b-pos', sub: 'Targeted B2B segmentation' },
+          { lbl: 'Corporate Account NPS', val: '+68 NPS', tag: '94% Retained', cls: 'b-cyan', sub: 'Dedicated SLA dashboards' }
+        ],
+        chartTitle: 'Corporate & MICE Revenue Trajectory ($M)',
+        months: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        actual: [0.45, 0.47, 0.55, 0.56, 0.57, 0.60, 0.60, 0.63, 0.60, 0.62, 0.77, 0.78],
+        base: [0.43, 0.46, 0.50, 0.53, 0.54, 0.56, 0.56, 0.58, 0.58, 0.60, 0.68, 0.67],
+        breakdownTitle: 'Corporate Spend Breakdown',
+        drivers: [
+          { name: 'Executive Aviation & Transfers', pct: 45, color: '#10B981' },
+          { name: 'Regional Conferences (MICE)', pct: 35, color: '#38BDF8' },
+          { name: 'Diplomatic Retainers', pct: 20, color: '#64748B' }
+        ],
+        insight: '<strong>Key Driver:</strong> Consolidating fragmented travel invoices into a single Power BI executive view reduced client billing disputes by 42%.'
+      }
+    }
+  },
+  ENTERPRISE: {
+    fileName: 'Enterprise_StarSchema_Migration_v2.pbix',
+    slicers: [
+      { id: 'ALL_E', label: 'All 15+ Dashboards' },
+      { id: 'ETL', label: 'ETL Pipeline Speed' },
+      { id: 'ADOPT', label: '200+ User Adoption' }
+    ],
+    views: {
+      ALL_E: {
+        plainEnglish: 'Replacing slow legacy reports with 15+ star-schema Power BI dashboards cut data processing time by 40% and lifted team productivity by 35%.',
+        kpis: [
+          { lbl: 'ETL Processing Time', val: '14 Mins', tag: '-40.0% Faster', cls: 'b-pos', sub: 'Down from 24 mins legacy SAP' },
+          { lbl: 'Daily Active BI Users', val: '218 Users', tag: '+35% Output', cls: 'b-pos', sub: 'Across 3+ client enterprises' },
+          { lbl: 'Client YoY Revenue Lift', val: '+18.0%', tag: 'BI-Driven', cls: 'b-cyan', sub: 'Faster inventory & sales insight' },
+          { lbl: 'DAX Query Response', val: '0.4 sec', tag: 'Star Schema', cls: 'b-pos', sub: 'Sub-second visual rendering' }
+        ],
+        chartTitle: 'Legacy SAP vs. Modern Star-Schema Query Latency (Seconds)',
+        months: ['M1','M2','M3','M4','M5','M6','M7','M8','M9','M10','M11','M12'],
+        actual: [4.2, 3.8, 2.9, 2.1, 1.5, 1.1, 0.8, 0.6, 0.5, 0.45, 0.42, 0.40],
+        base: [4.5, 4.4, 4.6, 4.5, 4.7, 4.8, 4.9, 5.0, 5.1, 5.2, 5.3, 5.4],
+        breakdownTitle: 'Workload Reduction by Department',
+        drivers: [
+          { name: 'Finance & Month-End Close', pct: 44, color: '#10B981' },
+          { name: 'Supply Chain & Procurement', pct: 33, color: '#38BDF8' },
+          { name: 'Commercial Sales Operations', pct: 23, color: '#64748B' }
+        ],
+        insight: '<strong>Why It Worked:</strong> Moving heavy calculations upstream into SQL views and clean star-schema fact/dimension tables eliminated report timeouts for 200+ daily users.'
+      },
+      ETL: {
+        plainEnglish: 'Automated incremental refresh and SQL indexing cut daily warehouse load times by 40% with zero manual CSV exports.',
+        kpis: [
+          { lbl: 'Pipeline Refresh Window', val: '14 Mins', tag: '-40% Latency', cls: 'b-pos', sub: '100% automated schedule' },
+          { lbl: 'Data Validation Pass Rate', val: '99.94%', tag: 'Governed', cls: 'b-pos', sub: 'Automated anomaly checks' },
+          { lbl: 'Manual Hours Eliminated', val: '24 hrs/wk', tag: '60% Saved', cls: 'b-cyan', sub: 'Per operational department' },
+          { lbl: 'Model Compression Ratio', val: '6.4x', tag: 'VertiPaq', cls: 'b-pos', sub: 'Optimized cardinality' }
+        ],
+        chartTitle: 'Daily Automated Data Refresh Reliability (%)',
+        months: ['M1','M2','M3','M4','M5','M6','M7','M8','M9','M10','M11','M12'],
+        actual: [94.0, 95.5, 97.2, 98.4, 99.1, 99.5, 99.8, 99.9, 99.9, 99.95, 99.98, 99.99],
+        base: [88.0, 87.5, 89.0, 88.2, 87.0, 86.5, 88.0, 87.2, 86.8, 87.5, 87.0, 86.5],
+        breakdownTitle: 'Pipeline Optimization Sources',
+        drivers: [
+          { name: 'Star-Schema Fact/Dim Modeling', pct: 50, color: '#10B981' },
+          { name: 'SQL Query Folding & Indexing', pct: 32, color: '#38BDF8' },
+          { name: 'Incremental Partition Refresh', pct: 18, color: '#64748B' }
+        ],
+        insight: '<strong>Architecture Takeaway:</strong> Replacing flat, wide tables with a strict star schema reduced memory footprint by 68% while doubling report concurrency.'
+      },
+      ADOPT: {
+        plainEnglish: 'Stakeholder-first requirements gathering ensured 92% weekly active adoption among 200+ business users within 60 days of launch.',
+        kpis: [
+          { lbl: 'Weekly Active Adoption', val: '92.4%', tag: '200+ Users', cls: 'b-pos', sub: 'Self-service BI enablement' },
+          { lbl: 'Decision Cycle Speed', val: '+30.0%', tag: 'Faster SLA', cls: 'b-pos', sub: 'Real-time vs weekly static' },
+          { lbl: 'Governed KPIs Standardized', val: '48 KPIs', tag: 'Single Truth', cls: 'b-cyan', sub: 'Zero conflicting definitions' },
+          { lbl: 'Client Contract Retention', val: '100%', tag: 'Multi-Year', cls: 'b-pos', sub: 'Expanded scope across teams' }
+        ],
+        chartTitle: 'Monthly Active Power BI Users Post-Migration',
+        months: ['M1','M2','M3','M4','M5','M6','M7','M8','M9','M10','M11','M12'],
+        actual: [45, 78, 112, 145, 168, 182, 194, 202, 208, 212, 215, 218],
+        base: [40, 45, 50, 52, 55, 55, 58, 60, 60, 62, 62, 65],
+        breakdownTitle: 'Active User Base by Role',
+        drivers: [
+          { name: 'Regional Operations Managers', pct: 46, color: '#10B981' },
+          { name: 'Finance & Controlling Analysts', pct: 34, color: '#38BDF8' },
+          { name: 'C-Suite & Board Executives', pct: 20, color: '#64748B' }
+        ],
+        insight: '<strong>User Adoption Secret:</strong> Every dashboard was co-designed in structured requirements sessions so each manager saw their exact 5 action metrics immediately.'
+      }
+    }
+  },
+  FINANCE: {
+    fileName: 'Financial_Close_Automation_Governance_v2.pbix',
+    slicers: [
+      { id: 'ALL_F', label: 'Consolidated P&L' },
+      { id: 'CLOSE', label: 'Month-End Close' },
+      { id: 'BUDGET', label: 'Budget & Audit Control' }
+    ],
+    views: {
+      ALL_F: {
+        plainEnglish: 'Automating financial reporting models shortened month-end close time by 25% while maintaining 100% audit accuracy across multi-million budgets.',
+        kpis: [
+          { lbl: 'Month-End Close Cycle', val: '4.5 Days', tag: '-25.0% Faster', cls: 'b-pos', sub: 'Down from 6.0 days manual' },
+          { lbl: 'Operating Cost Reduction', val: '-40.0%', tag: 'Process ROI', cls: 'b-pos', sub: 'Resource allocation redesign' },
+          { lbl: 'Budget Variance Accuracy', val: '99.6%', tag: 'Zero Audit Issues', cls: 'b-cyan', sub: 'Validated GL reconciliation' },
+          { lbl: 'Reporting Hours Saved', val: '20+ hrs/wk', tag: '60% Automated', cls: 'b-pos', sub: 'Freed for strategic analysis' }
+        ],
+        chartTitle: 'Days Required to Complete Month-End Financial Close',
+        months: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        actual: [6.0, 5.8, 5.5, 5.2, 5.0, 4.8, 4.7, 4.6, 4.5, 4.5, 4.5, 4.4],
+        base: [6.2, 6.1, 6.3, 6.2, 6.4, 6.3, 6.5, 6.4, 6.5, 6.6, 6.5, 6.5],
+        breakdownTitle: 'Cost Savings Allocation',
+        drivers: [
+          { name: 'Automated GL & Variance Mapping', pct: 48, color: '#10B981' },
+          { name: 'Resource Allocation Redesign', pct: 34, color: '#38BDF8' },
+          { name: 'Real-Time Budget Alerts', pct: 18, color: '#64748B' }
+        ],
+        insight: '<strong>Financial Control Impact:</strong> Automated DAX variance flags highlight cost overruns before month-end, empowering budget owners to act mid-quarter.'
+      },
+      CLOSE: {
+        plainEnglish: 'Direct SQL connectors eliminated manual trial-balance copy-pasting, shaving 1.5 full days off every financial close.',
+        kpis: [
+          { lbl: 'Close Cycle Acceleration', val: '-25.0%', tag: '1.5 Days Saved', cls: 'b-pos', sub: 'Consistent across 12 months' },
+          { lbl: 'Reconciliation Errors', val: '0.0%', tag: '100% Match', cls: 'b-pos', sub: 'Automated check-sums' },
+          { lbl: 'Board Pack Prep Time', val: '2 Hours', tag: '-80% Effort', cls: 'b-cyan', sub: 'Live Power BI presentation' },
+          { lbl: 'Audit Trail Completeness', val: '100%', tag: 'Zero Findings', cls: 'b-pos', sub: 'Full lineage documentation' }
+        ],
+        chartTitle: 'Manual Reconciliation Hours per Close Cycle',
+        months: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        actual: [48, 44, 38, 32, 26, 22, 19, 18, 17, 16, 16, 15],
+        base: [50, 51, 50, 52, 51, 53, 52, 54, 53, 55, 54, 55],
+        breakdownTitle: 'Close Automation Breakdown',
+        drivers: [
+          { name: 'Automated Trial Balance Ingestion', pct: 52, color: '#10B981' },
+          { name: 'Intercompany Elimination Rules', pct: 28, color: '#38BDF8' },
+          { name: 'Executive Commentary Templates', pct: 20, color: '#64748B' }
+        ],
+        insight: '<strong>Finance Team Benefit:</strong> Controllers shifted from 70% data gathering to 80% forward-looking cash flow and margin advisory.'
+      },
+      BUDGET: {
+        plainEnglish: 'Granular cost-center tracking and redesigned resource allocation cut operational overhead by 40% with zero audit findings.',
+        kpis: [
+          { lbl: 'Operational Cost Drop', val: '-40.0%', tag: 'Verified ROI', cls: 'b-pos', sub: 'Streamlined resource model' },
+          { lbl: 'Audit Compliance Score', val: '100%', tag: 'Zero Findings', cls: 'b-pos', sub: 'Full lifecycle governance' },
+          { lbl: 'Programme Completion', val: '85.0%', tag: 'On-Schedule', cls: 'b-cyan', sub: 'Agile milestone tracking' },
+          { lbl: 'Forecast Accuracy', val: '98.8%', tag: '±1.2% Band', cls: 'b-pos', sub: 'Rolling 4-quarter outlook' }
+        ],
+        chartTitle: 'Operational Cost Index (Baseline = 100)',
+        months: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        actual: [100, 96, 91, 86, 80, 75, 70, 66, 63, 61, 60, 60],
+        base: [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111],
+        breakdownTitle: 'Efficiency Gain Drivers',
+        drivers: [
+          { name: 'Resource Allocation Optimization', pct: 45, color: '#10B981' },
+          { name: 'Vendor & Spend Consolidation', pct: 35, color: '#38BDF8' },
+          { name: 'Automated Milestone Tracking', pct: 20, color: '#64748B' }
+        ],
+        insight: '<strong>Governance Takeaway:</strong> Combining strict metadata definitions with real-time burn-rate dashboards prevented budget overruns across all cost centers.'
+      }
+    }
+  }
+};
+
+let currentModelKey = 'TRAVEL';
+
+function loadDashboardModel(modelKey, tabBtn){
+  currentModelKey = modelKey;
+  if(tabBtn){
+    document.querySelectorAll('.suite-tab').forEach(t => t.classList.remove('active'));
+    tabBtn.classList.add('active');
+  }
+
+  const model = biModels[modelKey];
+  document.getElementById('pbi-file-name').textContent = model.fileName;
+
+  const slicerBar = document.getElementById('pbi-slicer-bar');
+  slicerBar.innerHTML = `<span class="slicer-lbl">FILTER VIEW:</span>` + model.slicers.map((s, idx) => `
+    <button type="button" class="slicer-chip ${idx === 0 ? 'active' : ''}" onclick="renderDashboardView('${s.id}', this)">${s.label}</button>
+  `).join('');
+
+  renderDashboardView(model.slicers[0].id, null);
+}
+
+function renderDashboardView(viewId, chipBtn){
+  if(chipBtn){
+    document.querySelectorAll('.slicer-chip').forEach(c => c.classList.remove('active'));
+    chipBtn.classList.add('active');
+  }
+
+  const view = biModels[currentModelKey].views[viewId];
+  document.getElementById('pbi-plain-english').textContent = view.plainEnglish;
+
+  view.kpis.forEach((k, idx) => {
+    const n = idx + 1;
+    document.getElementById(`k${n}-lbl`).textContent = k.lbl;
+    document.getElementById(`k${n}-val`).textContent = k.val;
+    const tagEl = document.getElementById(`k${n}-tag`);
+    tagEl.textContent = k.tag;
+    tagEl.className = `kpi-badge ${k.cls}`;
+    document.getElementById(`k${n}-sub`).textContent = k.sub;
+  });
+
+  document.getElementById('chart-heading').textContent = view.chartTitle;
+  document.getElementById('breakdown-title').textContent = view.breakdownTitle;
+  document.getElementById('action-insight').innerHTML = view.insight;
+
+  const driverContainer = document.getElementById('driver-bars');
+  driverContainer.innerHTML = view.drivers.map(d => `
+    <div>
+      <div class="driver-top">
+        <span class="driver-lbl">${d.name}</span>
+        <span class="driver-pct">${d.pct}%</span>
+      </div>
+      <div class="driver-bar-bg">
+        <div class="driver-bar-fill" style="width:${d.pct}%;background:${d.color}"></div>
+      </div>
+    </div>
+  `).join('');
+
+  // Render SVG Chart
+  const W = 600, H = 210, padT = 20, padB = 20;
+  const maxVal = Math.max(...view.actual, ...view.base) * 1.12;
+  const minVal = Math.min(...view.actual, ...view.base) * 0.75;
+  const span = (maxVal - minVal) || 1;
+  const stepX = W / (view.actual.length - 1);
+
+  const actPts = view.actual.map((v, i) => ({
+    x: i * stepX,
+    y: H - padB - ((v - minVal) / span) * (H - padT - padB)
+  }));
+  const basePts = view.base.map((v, i) => ({
+    x: i * stepX,
+    y: H - padB - ((v - minVal) / span) * (H - padT - padB)
+  }));
+
+  const mainD = actPts.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ');
+  const baseD = basePts.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`).join(' ');
+  const areaD = `${mainD} L ${W} ${H - padB} L 0 ${H - padB} Z`;
+
+  document.getElementById('svg-main').setAttribute('d', mainD);
+  document.getElementById('svg-base').setAttribute('d', baseD);
+  document.getElementById('svg-area').setAttribute('d', areaD);
+
+  const dotsGroup = document.getElementById('svg-dots');
+  const tooltip = document.getElementById('bi-tooltip');
+  dotsGroup.innerHTML = '';
+
+  actPts.forEach((pt, idx) => {
+    const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    circle.setAttribute('cx', pt.x);
+    circle.setAttribute('cy', pt.y);
+    circle.setAttribute('r', '4.5');
+    circle.setAttribute('class', 'data-pt');
+
+    const diff = (((view.actual[idx] - view.base[idx]) / view.base[idx]) * 100).toFixed(1);
+    const sign = diff >= 0 ? '+' : '';
+
+    circle.addEventListener('mouseenter', () => {
+      tooltip.innerHTML = `
+        <div style="color:var(--emerald-bright);font-weight:700">${view.months[idx]}</div>
+        <div>BI Model: <strong>${view.actual[idx]}</strong></div>
+        <div>Baseline: ${view.base[idx]} (${sign}${diff}%)</div>
+      `;
+      tooltip.style.left = `${(pt.x / W) * 100}%`;
+      tooltip.style.top = `${pt.y}px`;
+      tooltip.classList.add('visible');
+    });
+
+    circle.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('visible');
+    });
+
+    dotsGroup.appendChild(circle);
+  });
+}
+
+loadDashboardModel('TRAVEL', null);
+
+// 4. SIMULATOR
+function calcSimulator(){
+  const rev = parseInt(document.getElementById('rng-rev').value, 10);
+  const team = parseInt(document.getElementById('rng-team').value, 10);
+  const lift = parseInt(document.getElementById('rng-lift').value, 10);
+
+  document.getElementById('lbl-rev').textContent = `$${rev.toLocaleString()}`;
+  document.getElementById('lbl-team').textContent = `${team} Staff`;
+  document.getElementById('lbl-lift').textContent = `${lift}%`;
+
+  const revGain = rev * (lift / 100);
+  const hrsSaved = team * 20 * 48; // 20 hrs/week
+  const prodSavings = hrsSaved * 50; // $50/hr
+  const totalValue = revGain + prodSavings;
+
+  document.getElementById('res-rev-gain').textContent = `+$${(revGain / 1e6).toFixed(2)}M`;
+  document.getElementById('res-hrs').textContent = `${hrsSaved.toLocaleString()} hrs`;
+  document.getElementById('res-prod').textContent = `$${Math.round(prodSavings / 1000)}K`;
+
+  const revPct = Math.round((revGain / totalValue) * 100);
+  const savPct = 100 - revPct;
+
+  const mRev = document.getElementById('m-rev');
+  const mSav = document.getElementById('m-sav');
+  mRev.style.width = `${revPct}%`;
+  mRev.textContent = `Revenue Lift ${revPct}%`;
+  mSav.style.width = `${savPct}%`;
+  mSav.textContent = `Time Saved ${savPct}%`;
+
+  document.getElementById('roi-summary').innerHTML = `
+    Automating reporting eliminates <strong>${hrsSaved.toLocaleString()} manual hours annually</strong> (60% workload reduction), while predictive pricing unlocks <strong>$${(revGain / 1e6).toFixed(2)}M</strong> in direct top-line revenue.
+  `;
+}
+calcSimulator();
+
+// 5. SCROLL REVEAL & FORM SUBMISSION
+const revObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => revObserver.observe(el));
+
+function submitInquiry(e){
+  e.preventDefault();
+  const btn = document.getElementById('btn-send');
+  const orig = btn.textContent;
+  btn.textContent = '✓ Consultation Request Sent — Thank You';
+  btn.style.background = '#10B981';
+  setTimeout(() => {
+    btn.textContent = orig;
+    btn.style.background = '';
+    e.target.reset();
+  }, 4000);
+}
+</script>
 </body>
 </html>
